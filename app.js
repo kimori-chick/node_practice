@@ -53,7 +53,7 @@ function response_index(request, response) {
   // POSTアクセス時の処理
   if (request.method == 'POST') {
     var body = '';
-
+    
     // データ受信のイベント処理
     request.on('data', (data) => {
       body += data;
@@ -105,7 +105,7 @@ function getCookie(key, request) {
 
 // otherのアクセス処理
 function response_other(request, response) {
-  var msg = "これはOtherページです。"
+  var msg = "This is Other page"
   var content = ejs.render(other_page, {
     title: "Other",
     content: msg,
