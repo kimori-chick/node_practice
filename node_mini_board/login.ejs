@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta http-enquiv="content-type" contnt="text/html; charaset=UTF-8">
+  <title>ミニメッセージボード</title>
+  <link rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <script>
+    function setId() {
+      var id = document.querySelector('#id_input').value;
+      localStorage.setItem('id', id);
+      location.href = '/';
+    }
+  </script>
+  </head>
+
+  <body class="container" onload="init();">
+
+    <header>
+      <h1 clas="display-4">メッセージボード</h1>
+    </header>
+    <div role="main">
+      <p>あなたのログインネームを入力してください。</p>
+      <div class="form-group">
+        <lavel for="id_input">Login name:</lavel>
+        <input type="text" id="id_input" class="form-control">
+      </div>
+      <button onclick="setId();" class="btn btn-primary"></button>
+    </div>
+  </body>
+  
+</html>
